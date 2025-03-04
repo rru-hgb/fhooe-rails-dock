@@ -1,0 +1,12 @@
+# Start with the official Ruby image
+FROM ruby:3.3
+
+
+# Set working directory
+#WORKDIR /home/app
+
+# Install Rails
+RUN gem install rails
+
+# Copy Gemfile and Gemfile.lock
+#COPY Gemfile* ./

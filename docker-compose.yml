@@ -1,0 +1,14 @@
+services:
+  rails:
+    container_name: rails
+    build:
+      dockerfile: Dockerfile-rails
+    command: ["sleep","infinity"]
+    volumes:
+      - ./app:/home/app
+      - bundle_cache:/usr/local/bundle
+    ports:
+      - 3000:3000
+
+volumes:
+  bundle_cache:
