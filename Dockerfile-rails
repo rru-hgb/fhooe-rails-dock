@@ -4,3 +4,10 @@ FROM ruby:3.3
 # Install Rails
 RUN gem install rails
 
+COPY src /src
+
+RUN cd /src \
+&& curl -o setupnodelts.sh -fsSL https://deb.nodesource.com/setup_lts.x \
+&& chmod +x setupnodelts.sh \
+&& /bin/sh /src/setupnodelts.sh \
+&& apt-get install -y nodejs 

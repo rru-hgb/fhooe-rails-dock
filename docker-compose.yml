@@ -9,6 +9,8 @@ services:
       - bundle_cache:/usr/local/bundle
     ports:
       - 3000:3000
-
+      - 3036:3036
+    environment:
+      - VITE_RUBY_HOST=0.0.0.0
 volumes:
   bundle_cache:
