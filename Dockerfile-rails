@@ -3,7 +3,7 @@ FROM ruby:3.4-slim
 
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
-    build-essential git curl ca-certificates libpq-dev \
+    libyaml-dev pkg-config build-essential git curl ca-certificates libpq-dev \
  && curl -fsSL https://deb.nodesource.com/setup_lts.x -o /tmp/nodesource.sh \
  && bash /tmp/nodesource.sh \
  && apt-get install -y --no-install-recommends nodejs \
