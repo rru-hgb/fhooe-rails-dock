@@ -20,7 +20,7 @@ Access rails container
 ```shell
 docker exec -it rails /bin/bash
 ```
-Subfolder app/ is mapped to /home/app in node container. 
+Subfolder rails/ is mapped to /home/rails in node container. 
 
 
 ### External Ports

@@ -1,11 +1,11 @@
 services:
   rails:
-    container_name: rails
+    container_name: rails26
     build:
       dockerfile: Dockerfile-rails
     command: ["sleep","infinity"]
     volumes:
-      - ./app:/home/app
+      - ./rails:/home/rails
       - bundle_cache:/usr/local/bundle
     ports:
       - 3000:3000
